@@ -12,12 +12,16 @@ class Card extends Component<IProps, IState> {
     super(props);
 
     this.state = {
-      message: "Good"
+      message: "Hello"
     };
   }
 
   sayGoodMorning = () => {
     this.setState({ message: "Good Morning" });
+  };
+
+  sayGoodAfternoon = (msg: string) => {
+    this.setState({ message: msg });
   };
 
   render() {
@@ -28,8 +32,20 @@ class Card extends Component<IProps, IState> {
         <button className="btn btn-primary" onClick={this.sayGoodMorning}>
           Gud Mrg
         </button>
-        <button className="btn btn-success "> Gud Noon </button>
-        <button className="btn btn-danger "> Gud Nyt </button>
+        <button
+          className="btn btn-success"
+          onClick={this.sayGoodAfternoon.bind(this, "Good Afternoon")}
+        >
+          Gud Noon
+        </button>
+        <button
+          className="btn btn-danger "
+          onClick={() => {
+            this.setState({ message: "Good Night" });
+          }}
+        >
+          Gud Nyt
+        </button>
       </div>
     );
   }
