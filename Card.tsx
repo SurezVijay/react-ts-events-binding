@@ -20,14 +20,24 @@ class Card extends Component<IProps, IState> {
     this.setState({ message: "Good Morning" });
   };
 
+  sayGoodAfternoon = () => {
+    this.setState({ message: "Good Morning" });
+  };
+
+
   render() {
     return (
       <div>
         <h3> Card Component </h3>
         <p> {this.state.message} </p>
         <button className="btn btn-primary" onClick={this.sayGoodMorning}>
-          {" "}
-          Say Morning{" "}
+          Say Morning
+        </button>
+        <button className="btn btn-success" onClick={this.sayGoodAfternoon}>
+          Say Morning
+        </button>
+        <button className="btn btn-danger" onClick={this.sayGoodMorning}>
+          Say Morning
         </button>
       </div>
     );
