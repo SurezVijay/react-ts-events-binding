@@ -52,9 +52,7 @@ class Card extends Component<IProps, IState> {
       product: {
         ...this.state.product,
         quantity:
-          this.state.product.quantity - 1 > 0
-            ? this.state.product.quantity - 1
-            : 1
+          this.state.product.quantity > 1 ? this.state.product.quantity - 1 : 1
       }
     });
   };
