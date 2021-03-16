@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "font-awesome/css/font-awesome.min.css";
 
 interface IProduct {
   sno: number;
@@ -95,7 +96,6 @@ class Card extends Component<IProps, IState> {
               <td> {product.sno} </td>
               <td> {product.item} </td>
               <td>
-                {" "}
                 <i className="p-2" onClick={this.incrQTY}>
                   {" "}
                   +{" "}
